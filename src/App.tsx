@@ -29,9 +29,17 @@ function App() {
 
   return (
     <>
-      <p>State: {'' + isConnected}</p>
-      <ConnectionManager />
-      <Event />
+      {isConnected ? (
+        <>
+          <ConnectionManager />
+          <Event />
+        </>
+      ) : (
+        <>
+          <p>State: {'' + isConnected}</p>
+          <ConnectionManager />
+        </>
+      )}
     </>
   )
 }
