@@ -7,7 +7,7 @@ const Event = () => {
         socket.on('connect', function () {
 
             socket.emit('events', { test: 'test' });
-            socket.emit('identity', 0, response =>
+            socket.emit('identity', 0, (response: string) =>
                 console.log('Identity:', response),
             );
         });
